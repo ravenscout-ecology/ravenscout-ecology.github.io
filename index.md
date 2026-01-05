@@ -1,6 +1,11 @@
 ---
-layout: single
-author_profile: true
+layout: splash
+header:
+  overlay_image: /assets/images/header-bg.jpg
+  overlay_filter: 0.5
+  caption: "Photo credit: RavenScout"
+title: "RavenScout Ecological Consulting Inc."
+excerpt: "Putting Science into Practice"
 ---
 
 # About RavenScout Ecological Consulting Inc.
