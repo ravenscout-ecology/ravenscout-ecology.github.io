@@ -1,7 +1,10 @@
 main:
+  - title: "Home"
+    url: /
   - title: "Services"
     url: /services/
-  - title: "Gallery"
-    url: /gallery/
   - title: "Contact"
     url: /contact/
+  - title: "Gallery"
+    url: /gallery/
+
