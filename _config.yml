@@ -28,6 +28,16 @@ author:
       icon: "fas fa-fw fa-phone-square"
       url: "tel:867-332-2371"
 
+# Navigation
+navigation:
+  main:
+    - title: "Services"
+      url: /services/
+    - title: "Gallery"
+      url: /gallery/
+    - title: "Contact"
+      url: /contact/
+      
 # Reading Files
 include:
   - .htaccess
