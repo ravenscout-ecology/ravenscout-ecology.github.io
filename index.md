@@ -23,7 +23,7 @@ Our team combines advanced academic training with extensive field experience in 
 **Owner/Operator**  
 Master of Science, University of Alberta
 
-![Anna Jacobsen](/assets/images/anna.jpg){: style="max-width: 300px; border-radius: 8px;"}
+![Anna Jacobsen](/assets/images/anna.jpg){: style="max-width: 100px; border-radius: 8px;"}
 
 </div>
 
@@ -35,7 +35,7 @@ Master of Science, University of Lethbridge
 Professional Biologist (Alberta Association of Professional Biologists)  
 PhD Candidate, University of Alberta (2022-2027)
 
-![Sejer Meyhoff](/assets/images/sejer.jpg){: style="max-width: 300px; border-radius: 8px;"}
+![Sejer Meyhoff](/assets/images/sejer.jpg){: style="max-width: 100px; border-radius: 8px;"}
 
 </div>
 
