@@ -3,6 +3,8 @@ layout: single
 classes: wide
 ---
 
+<div style="max-width: 1200px; margin: 0 auto;">
+
 <div style="text-align: center; margin: 2rem 0;">
   <img src="/assets/images/logo.png" alt="RavenScout Logo" style="max-width: 400px; width: 100%;">
   <p style="font-size: 1.2em; color: #666; margin-top: 1rem;">Putting Science into Practice</p>
