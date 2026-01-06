@@ -60,3 +60,57 @@ body {
 .site-title {
   display: none !important;
 }
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  /* Smaller padding on mobile */
+  .page__content {
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+  }
+  
+  /* Stack navigation buttons vertically if needed */
+  .greedy-nav .visible-links {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .greedy-nav a {
+    margin: 0.25rem 0 !important;
+    width: 90% !important;
+    text-align: center !important;
+  }
+  
+  /* Smaller logo on mobile */
+  .page__content img[alt="RavenScout Logo"] {
+    max-width: 250px !important;
+  }
+  
+  /* Single column for team members on mobile */
+  .team-grid,
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Smaller team photos on mobile */
+  .team-member img,
+  div[style*="text-align: center"] img[style*="max-width: 200px"] {
+    max-width: 150px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Even smaller adjustments for phones */
+  .greedy-nav a {
+    padding: 0.4rem 1rem !important;
+    font-size: 0.9em !important;
+  }
+  
+  h2 {
+    font-size: 1.5em !important;
+  }
+  
+  h3 {
+    font-size: 1.2em !important;
+  }
+}
