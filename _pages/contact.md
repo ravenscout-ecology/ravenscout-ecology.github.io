@@ -2,7 +2,7 @@
 layout: single
 title: "Contact Us"
 permalink: /contact/
-author_profile: true
+author_profile: false
 ---
 
 Ready to discuss your project? Get in touch:
