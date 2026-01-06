@@ -142,3 +142,6 @@ footer:
 # Copyright
 copyright: "RavenScout Ecological Consulting Inc."
 copyright_url: "https://ravenscout.ca"
+
+atom_feed:
+  hide: true
