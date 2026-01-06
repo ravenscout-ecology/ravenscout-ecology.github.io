@@ -1,14 +1,11 @@
 ---
-layout: splash
-header:
-  overlay_image: /assets/images/header-bg.jpg
-  overlay_filter: 0.5
-  image: /assets/images/logo.png
-excerpt: "Putting Science into Practice"
+layout: single
+classes: wide
 ---
 
 <div style="text-align: center; margin: 2rem 0;">
   <img src="/assets/images/logo.png" alt="RavenScout Logo" style="max-width: 400px; width: 100%;">
+  <p style="font-size: 1.2em; color: #666; margin-top: 1rem;">Putting Science into Practice</p>
 </div>
 
 RavenScout Ecological Consulting Inc. provides professional wildlife monitoring and ecological assessment services across the Yukon. We specialize in rigorous, science-based field work, analysis, and reporting that delivers actionable results for land management and conservation decisions.
