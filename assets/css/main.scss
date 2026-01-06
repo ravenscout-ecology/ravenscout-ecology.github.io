@@ -5,5 +5,8 @@
 @import "minimal-mistakes";
 
 .page__hero--overlay {
-  background-position: center top;
+  background-position: center top !important;
+  background-size: cover !important;
+  padding: 15em 0 !important; /* Makes header section much taller - adjust the first number */
+  min-height: 60vh !important; /* Makes it 60% of viewport height */
 }
