@@ -7,7 +7,7 @@ classes: wide
 
 <div style="text-align: center; margin: 2rem 0;">
   <img src="/assets/images/logo.png" alt="RavenScout Logo" style="max-width: 400px; width: 100%;">
-  <p style="font-size: 1.2em; color: #666; margin-top: 1rem;">Putting Science into Practice</p>
+  <p style="font-size: 1.2em; color: #666; margin-top: 1rem;">Putting Science Into Practice</p>
 </div>
 
 <p>RavenScout Ecological Consulting Inc. provides professional wildlife monitoring and ecological assessment services across the Yukon. We specialize in rigorous, science-based field work, analysis, and reporting that delivers actionable results for land management and conservation decisions.</p>
