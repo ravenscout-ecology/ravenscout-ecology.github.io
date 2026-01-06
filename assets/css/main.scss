@@ -21,33 +21,34 @@ body {
   margin-top: 2rem !important;
 }
 
-/* Header adjustments */
-.page__hero--overlay {
-  padding: 3em 0 !important;
-  min-height: auto !important;
-}
-
-/* Logo styling */
-.page__hero .page__hero-image {
-  max-width: 400px !important;
-  margin: 0 auto 1rem !important;
-  display: block !important;
-}
-
-/* Fix masthead/navigation bar */
+/* Navigation bar styling */
 .masthead {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  border-bottom: 1px solid #ddd !important;
+  background-color: rgba(245, 245, 245, 0.95) !important;
+  border-bottom: 2px solid #999 !important;
+  padding: 1rem 0 !important;
 }
 
 .greedy-nav {
   background: transparent !important;
 }
 
+/* Style navigation links as subtle buttons */
 .greedy-nav a {
+  background-color: rgba(94, 156, 211, 0.2) !important;
   color: #333 !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 4px !important;
+  margin: 0 0.5rem !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
 }
 
+.greedy-nav a:hover {
+  background-color: rgba(94, 156, 211, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Hide site title in masthead */
 .site-title {
-  color: #333 !important;
+  display: none !important;
 }
