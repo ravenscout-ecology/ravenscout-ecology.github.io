@@ -3,7 +3,7 @@ layout: splash
 header:
   overlay_image: /assets/images/header-bg.jpg
   overlay_filter: 0.5
-title: "RavenScout Ecological Consulting Inc."
+  image: /assets/images/logo.png
 excerpt: "Putting Science into Practice"
 ---
 
