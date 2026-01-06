@@ -5,15 +5,6 @@ header:
   overlay_filter: 0.5
 title: "RavenScout Ecological Consulting Inc."
 excerpt: "Putting Science into Practice"
-feature_row:
-  - image_path: /assets/images/anna.jpg
-    alt: "Anna Jacobsen"
-    title: "Anna Jacobsen, MSc"
-    excerpt: "**Owner/Operator**<br>Master of Science, University of Alberta"
-  - image_path: /assets/images/sejer.jpg
-    alt: "Sejer Meyhoff"
-    title: "Sejer Meyhoff, MSc"
-    excerpt: "**Biologist**<br>Master of Science, University of Lethbridge<br>PhD Candidate, University of Alberta (2022-2027)"
 ---
 
 # About Us
@@ -24,21 +15,28 @@ Our team combines advanced academic training with extensive field experience in 
 
 ## Our Team
 
-{% include feature_row %}
+<div class="team-grid" markdown="1" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
 
-# About RavenScout Ecological Consulting Inc.
+<div class="team-member" markdown="1" style="text-align: center;">
 
-RavenScout Ecological Consulting provides professional wildlife monitoring and ecological assessment services across the Yukon. We specialize in rigorous, science-based field work, analysis, and reporting that delivers actionable data for land management and conservation decisions.
-
-Our team combines advanced academic training with extensive field experience in bioacoustic monitoring, camera trapping, and environmental data collection. We work with industry, government, and conservation organizations to deliver high-quality ecological data and clear, practical reporting.
-
-## Our Team
-
-**Anna Jacobsen, MSc**  
-Owner/Operator  
+### Anna Jacobsen, MSc
+**Owner/Operator**  
 Master of Science, University of Alberta
 
-**Sejer Meyhoff, MSc PBiol**  
-Biologist  
+![Anna Jacobsen](/assets/images/anna.jpg){: style="max-width: 300px; border-radius: 8px;"}
+
+</div>
+
+<div class="team-member" markdown="1" style="text-align: center;">
+
+### Sejer Meyhoff, MSc
+**Biologist**  
 Master of Science, University of Lethbridge  
+Professional Biologist (Alberta Association of Professional Biologists)  
 PhD Candidate, University of Alberta (2022-2027)
+
+![Sejer Meyhoff](/assets/images/sejer.jpg){: style="max-width: 300px; border-radius: 8px;"}
+
+</div>
+
+</div>
