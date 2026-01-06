@@ -128,3 +128,17 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+  # Site Footer
+footer:
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:RavenScoutYT@gmail.com"
+    - label: "Phone"
+      icon: "fas fa-fw fa-phone-square"
+      url: "tel:867-332-2371"
+
+# Copyright
+copyright: "RavenScout Ecological Consulting Inc."
+copyright_url: "https://ravenscout.ca"
