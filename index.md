@@ -29,10 +29,10 @@ Master of Science, University of Alberta
 
 <div class="team-member" markdown="1" style="text-align: center;">
 
-### Sejer Meyhoff, MSc
+### Sejer Meyhoff, MSc PBiol
 **Biologist**  
 Master of Science, University of Lethbridge  
-Professional Biologist (Alberta Association of Professional Biologists)  
+Professional Biologist (ASPB)
 PhD Candidate, University of Alberta (2022-2027)
 
 ![Sejer Meyhoff](/assets/images/sejer.jpg){: style="max-width: 100px; border-radius: 8px;"}
