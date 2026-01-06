@@ -4,7 +4,7 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* Full page background image */
+/* Full page background */
 body {
   background-image: url('/assets/images/header-bg.jpg') !important;
   background-size: cover !important;
@@ -13,11 +13,18 @@ body {
   background-repeat: no-repeat !important;
 }
 
-/* Make content area semi-transparent so background shows through */
+/* Content area styling */
 .page__content {
   background-color: rgba(255, 255, 255, 0.95) !important;
   padding: 2rem !important;
   border-radius: 8px !important;
+  margin-top: 2rem !important;
+}
+
+/* Header adjustments */
+.page__hero--overlay {
+  padding: 3em 0 !important;
+  min-height: auto !important;
 }
 
 /* Logo styling */
@@ -27,8 +34,20 @@ body {
   display: block !important;
 }
 
-/* Adjust header to not need huge padding */
-.page__hero--overlay {
-  padding: 3em 0 !important;
-  min-height: auto !important;
+/* Fix masthead/navigation bar */
+.masthead {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+.greedy-nav {
+  background: transparent !important;
+}
+
+.greedy-nav a {
+  color: #333 !important;
+}
+
+.site-title {
+  color: #333 !important;
 }
