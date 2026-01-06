@@ -7,8 +7,6 @@ header:
 excerpt: "Putting Science into Practice"
 ---
 
-# About Us
-
 RavenScout Ecological Consulting provides professional wildlife monitoring and ecological assessment services across Yukon and Alberta. We specialize in rigorous, science-based field work that delivers actionable data for land management and conservation decisions.
 
 Our team combines advanced academic training with extensive field experience in camera trap surveys, bioacoustic monitoring, and multi-species interaction studies. We work with industry, government, and conservation organizations to deliver high-quality ecological data and clear, practical reporting.
