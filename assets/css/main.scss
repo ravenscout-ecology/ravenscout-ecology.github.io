@@ -61,6 +61,18 @@ body {
   display: none !important;
 }
 
+/* Smaller font for team member details */
+div[style*="text-align: center"] p {
+  font-size: 0.9em !important;
+  line-height: 1.5 !important;
+}
+
+/* Keep headings normal size */
+div[style*="text-align: center"] h3 {
+  font-size: 1.3em !important;
+  margin-bottom: 0.5rem !important;
+}
+
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
   /* Smaller padding on mobile */
@@ -87,13 +99,11 @@ body {
   }
   
   /* Single column for team members on mobile */
-  .team-grid,
   div[style*="grid-template-columns: 1fr 1fr"] {
     grid-template-columns: 1fr !important;
   }
   
   /* Smaller team photos on mobile */
-  .team-member img,
   div[style*="text-align: center"] img[style*="max-width: 200px"] {
     max-width: 150px !important;
   }
