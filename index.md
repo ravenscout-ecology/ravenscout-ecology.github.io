@@ -31,9 +31,6 @@ excerpt: "Ecological consulting services based in Whitehorse, Yukon."
     Master of Science, University of Alberta</p>
     
     <div class="member-links">
-      #<a href="https://linkedin.com" target="_blank" style="color: #0077b5; font-weight: bold;">
-      #  <i class="fab fa-linkedin"></i> LinkedIn
-      #</a>
       <br>
       <a href="/anna-profile/" class="btn btn--info" style="margin-top: 10px;">Detailed Profile</a>
     </div>
