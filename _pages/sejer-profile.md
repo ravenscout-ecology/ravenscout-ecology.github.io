@@ -9,7 +9,7 @@ header:
 ---
 
 ## Professional Bio
-*(Placeholder for Sejer's full professional biography.)*
+
 
 ### Education
 * **Ph.D. Candidate**, University of Alberta (Current)
