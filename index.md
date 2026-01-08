@@ -25,15 +25,32 @@ excerpt: "RavenScout Ecological Consulting Inc. provides professional wildlife m
   <div class="team-member">
     <img src="/assets/images/anna.jpg" alt="Anna Jacobsen">
     <h3>Anna Jacobsen, MSc</h3>
-    <p><strong>Owner/Biologist</strong><br>
+    <p><strong>Owner/Operator</strong><br>
     Master of Science, University of Alberta</p>
+    
+    <div class="member-links">
+      <a href="https://linkedin.com" target="_blank" style="color: #0077b5; font-weight: bold;">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <br>
+      <a href="/anna-profile/" class="btn btn--info" style="margin-top: 10px;">Detailed Profile</a>
+    </div>
   </div>
 
   <div class="team-member">
     <img src="/assets/images/sejer.jpg" alt="Sejer Meyhoff">
-    <h3>Sejer Meyhoff, MSc AWB PBiol</h3>
+    <h3>Sejer Meyhoff, MSc PBiol</h3>
     <p><strong>Biologist</strong><br>
     Master of Science, University of Lethbridge<br>
-    PhD candidate, University of Alberta (2022-2027)</p>
+    Professional Biologist (ASPB)<br>
+    PhD Candidate, University of Alberta (2022-2027)</p>
+    
+    <div class="member-links">
+      <a href="https://linkedin.com" target="_blank" style="color: #0077b5; font-weight: bold;">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <br>
+      <a href="/sejer-profile/" class="btn btn--info" style="margin-top: 10px;">Detailed Profile</a>
+    </div>
   </div>
 </div>
