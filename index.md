@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "RavenScout Ecological Consulting"
+title: "RavenScout Ecological Consulting Inc."
 header:
   overlay_image: /assets/images/header-bg.jpg
   overlay_filter: 0.4
