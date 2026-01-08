@@ -3,7 +3,7 @@ layout: single
 title: "Contact Us"
 permalink: /contact/
 classes: wide
-author_profile: false
+author_profile: true
 ---
 
 Ready to discuss your project? Get in touch using the form below or contact us directly.
