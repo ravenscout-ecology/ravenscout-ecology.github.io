@@ -1,4 +1,3 @@
-
 ---
 permalink: /sejer-profile/
 title: "Sejer Meyhoff, MSc PBiol"
