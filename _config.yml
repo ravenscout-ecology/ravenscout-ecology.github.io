@@ -18,7 +18,7 @@ repository: "ravenscout-ecology/ravenscout-ecology.github.io"
 author:
   name: "&nbsp;"
   avatar: "/assets/images/logo.png"
-    email: "RavenScoutYT@gmail.com" 
+  bio: "RavenScoutYT@gmail.com"
   location: "Whitehorse, Yukon"
   
 # Navigation
