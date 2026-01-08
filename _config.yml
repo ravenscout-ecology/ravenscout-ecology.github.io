@@ -16,9 +16,9 @@ repository: "ravenscout-ecology/ravenscout-ecology.github.io"
 
 # Site Author
 author:
-  name: "RavenScout"
+  name: ""
   avatar: "/assets/images/logo.png"
-  bio: "Ecological Consulting"
+  bio: ""
   location: "Whitehorse, Yukon"
   
 # Navigation
