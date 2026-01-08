@@ -3,7 +3,7 @@ layout: single
 title: "Field Work Gallery"
 permalink: /gallery/
 classes: wide
-author_profile: false
+author_profile: true
 ---
 
 <div style="max-width: 1200px; margin: 0 auto;">
