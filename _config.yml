@@ -14,11 +14,11 @@ url: "https://ravenscout.ca"
 baseurl: ""
 repository: "ravenscout-ecology/ravenscout-ecology.github.io"
 
-# Site Author
+# Author panel
 author:
-  name: ""
+  name: "&nbsp;"  # Uses a "non-breaking space" so the field isn't empty, but looks invisible.
   avatar: "/assets/images/logo.png"
-  bio: "RavenScoutYT@gmail.com"
+  bio: "[RavenScoutYT@gmail.com](mailto:RavenScoutYT@gmail.com)" # Makes the email clickable!
   location: "Whitehorse, Yukon"
   
 # Navigation
