@@ -41,11 +41,10 @@ excerpt: "Ecological consulting services based in Whitehorse, Yukon."
 
   <div class="team-member">
     <img src="/assets/images/sejer.jpg" alt="Sejer Meyhoff">
-    <h3>Sejer Meyhoff, MSc PBiol</h3>
+    <h3>Sejer Meyhoff, MSc AWB PBiol</h3>
     <p><strong>Biologist</strong><br>
     Master of Science, University of Lethbridge<br>
-    Professional Biologist (ASPB)<br>
-    PhD Candidate, University of Alberta (2022-2027)</p>
+    PhD candidate, University of Alberta (2022-2027)</p>
     
     <div class="member-links">
       <a href="https://linkedin.com" target="_blank" style="color: #0077b5; font-weight: bold;">
