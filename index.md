@@ -16,7 +16,7 @@ excerpt: "Ecological consulting services based in Whitehorse, Yukon."
 </div>
 
 <div style="max-width: 800px; margin: 0 auto; text-align: justify; font-size: 1.1em; line-height: 1.8;">
-  <p><strong>Based in the Yukon,</strong> we provide professional wildlife monitoring and ecological assessment services across the territory. We specialize in rigorous, science-based field work, analysis, and reporting that delivers actionable results for land management and conservation decisions.</p>
+  <p><Based in the Yukon, we provide professional wildlife monitoring and ecological assessment services across the territory. We specialize in rigorous, science-based field work, analysis, and reporting that delivers actionable results for land management and conservation decisions.</p>
   
   <p>Our team combines advanced academic training with field experience in bioacoustic monitoring, camera trapping, and environmental data collection including spectral indices. We work with industry, government, and conservation organizations to deliver high-quality ecological data, analysis, and clear, practical reporting.</p>
 </div>
