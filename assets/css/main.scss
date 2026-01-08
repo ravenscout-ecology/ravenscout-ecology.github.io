@@ -36,6 +36,32 @@
     transition: transform 0.2s;
 }
 
+/* --- TEAM GRID STYLING --- */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* Space between profiles */
+  margin-top: 20px;
+}
+
+.team-member {
+  flex: 1 1 300px; /* Flex-grow, Flex-shrink, Basis */
+  max-width: 450px; /* Don't get too wide on huge screens */
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow card effect */
+}
+
+.team-member img {
+  width: 100%;
+  height: auto; /* Maintains original aspect ratio - NO CROPPING */
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
 .archive__item-teaser img:hover {
     transform: translateY(-2px);
 }
