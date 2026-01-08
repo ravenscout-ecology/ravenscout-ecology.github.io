@@ -78,3 +78,33 @@
     margin-left: 10px;
     font-size: 1rem;
 }
+
+/* --- PROFILE PAGE FIXES --- */
+
+/* 1. Reduce the text size for paragraphs and lists */
+.page__content p, 
+.page__content li {
+    font-size: 1rem !important;  /* Standard 16px size */
+    line-height: 1.6 !important; /* Clean spacing */
+}
+
+/* 2. Make the headers (Bio, Education, etc.) tighter */
+.page__content h2 {
+    font-size: 1.5rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.page__content h3 {
+    font-size: 1.25rem !important;
+    margin-top: 1rem !important;
+}
+
+/* 3. OPTIONAL: Center the content if it looks too wide now */
+/* Since the sidebar is gone, the text might stretch too far. 
+   This keeps it readable in the middle of the screen. */
+.page__content {
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
