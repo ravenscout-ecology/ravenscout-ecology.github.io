@@ -108,3 +108,22 @@
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
+/* --- SIDEBAR LOGO SIZE FIX --- */
+.author__avatar img {
+    /* Forces the logo to fill the sidebar width */
+    max-width: 100% !important;
+    width: 100% !important;
+    
+    /* Removes the circular clipping if it's happening */
+    border-radius: 0 !important; 
+    
+    /* specific tweak for the sidebar width itself if needed */
+    padding: 0 !important;
+}
+
+/* Optional: If the sidebar itself feels too narrow */
+.page__sidebar {
+   /* This makes the left column slightly wider on large screens */
+   /* default is usually around 200px */
+}
