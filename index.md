@@ -46,7 +46,7 @@ excerpt: "RavenScout Ecological Consulting Inc. provides professional wildlife m
     PhD Candidate, University of Alberta (2022-2027)</p>
     
     <div class="member-links">
-      <a href="https://linkedin.com" target="_blank" style="color: #0077b5; font-weight: bold;">
+      <a href="https://www.linkedin.com/in/sejermeyhoff/" target="_blank" style="color: #0077b5; font-weight: bold;">
         <i class="fab fa-linkedin"></i> LinkedIn
       </a>
       <br>
