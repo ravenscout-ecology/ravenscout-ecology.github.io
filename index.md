@@ -25,7 +25,7 @@ excerpt: "RavenScout Ecological Consulting Inc. provides professional wildlife m
   <div class="team-member">
     <img src="/assets/images/anna.jpg" alt="Anna Jacobsen">
     <h3>Anna Jacobsen, MSc</h3>
-    <p><strong>Owner/Operator</strong><br>
+    <p><strong>Owner/Biologist</strong><br>
     Master of Science, University of Alberta</p>
     
     <div class="member-links">
@@ -42,8 +42,7 @@ excerpt: "RavenScout Ecological Consulting Inc. provides professional wildlife m
     <h3>Sejer Meyhoff, MSc PBiol</h3>
     <p><strong>Biologist</strong><br>
     Master of Science, University of Lethbridge<br>
-    Professional Biologist (ASPB)<br>
-    PhD Candidate, University of Alberta (2022-2027)</p>
+    PhD candidate, University of Alberta (2022-2027)</p>
     
     <div class="member-links">
       <a href="/sejer-profile/" class="btn btn--info" style="margin-top: 10px;">Detailed Profile</a>
