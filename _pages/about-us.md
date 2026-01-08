@@ -8,12 +8,12 @@ header:
 ---
 
 ## Our Mission
-**RavenScout Ecological Consulting Inc.** is dedicated to bridging the gap between academic rigor and practical land management. Based in Whitehorse, Yukon, we provide professional wildlife monitoring and ecological assessment services across the territory.
+**RavenScout Ecological Consulting Inc.** is dedicated to bridging the gap between academia and practical land management. Based in Whitehorse, Yukon, we provide professional wildlife monitoring and ecological assessment services across the territory.
 
 Our philosophy is **"Science in Practice."** We believe that high-quality data is the foundation of responsible conservation and development. Whether working with industry, government, or conservation organizations, our goal is to deliver clear, actionable results derived from robust scientific methods.
 
 ## Our Name
-The name RavenScout..
+The name RavenScout...
 
 ## Safety & Standards
 
