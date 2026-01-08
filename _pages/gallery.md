@@ -12,7 +12,7 @@ author_profile: false
 
 <div style="text-align: center;">
   <img src="/assets/images/anna-shrub-stick.jpg" alt="Anna collecting bird and shrub data on Yukon mountains" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-  <p style="margin-top: 0.5rem; color: #666;">Caption</p>
+  <p style="margin-top: 0.5rem; color: #666;">Anna collecting bird and shrub data on Yukon mountains</p>
 </div>
 
 <div style="text-align: center;">
