@@ -1,6 +1,6 @@
 # Theme Settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale: "en-US"
@@ -17,18 +17,10 @@ repository: "ravenscout-ecology/ravenscout-ecology.github.io"
 # Site Author
 author:
   name: "RavenScout"
-  avatar: # Add path to logo later
+  avatar: "/assets/images/logo.png"
   bio: "Ecological Consulting"
   location: "Whitehorse, Yukon"
-  email: "RavenScoutYT@gmail.com"
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:RavenScoutYT@gmail.com"
-    - label: "Phone"
-      icon: "fas fa-fw fa-phone-square"
-      url: "tel:867-332-2371"
-
+  
 # Navigation
 navigation:
   main:
