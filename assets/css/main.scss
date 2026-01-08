@@ -65,3 +65,16 @@
 .archive__item-teaser img:hover {
     transform: translateY(-2px);
 }
+
+/* Add padding to the top navigation bar so text doesn't hit the edge */
+.masthead .wrapper {
+    max-width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+/* Ensure the subtitle font size looks right in the corner */
+.site-subtitle {
+    margin-left: 10px;
+    font-size: 1rem;
+}
