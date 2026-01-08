@@ -16,9 +16,9 @@ repository: "ravenscout-ecology/ravenscout-ecology.github.io"
 
 # Author panel
 author:
-  name: "&nbsp;"  # Uses a "non-breaking space" so the field isn't empty, but looks invisible.
+  name: "&nbsp;"
   avatar: "/assets/images/logo.png"
-  bio: "[RavenScoutYT@gmail.com](mailto:RavenScoutYT@gmail.com)" # Makes the email clickable!
+    email: "RavenScoutYT@gmail.com" 
   location: "Whitehorse, Yukon"
   
 # Navigation
