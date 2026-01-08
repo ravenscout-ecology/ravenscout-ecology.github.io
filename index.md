@@ -29,7 +29,7 @@ excerpt: "RavenScout Ecological Consulting Inc. provides professional wildlife m
     Master of Science, University of Alberta</p>
     
     <div class="member-links">
-      <a href="/anna-profile.html/" class="btn btn--info" style="margin-top: 10px;">Detailed Profile</a><a href="https://linkedin.com" target="_blank" style="color: #0077b5; font-weight: bold;">
+      <a href="/anna-profile/" class="btn btn--info" style="margin-top: 10px;">Detailed Profile</a><a href="https://linkedin.com" target="_blank" style="color: #0077b5; font-weight: bold;">
       <br>
       <i class="fab fa-linkedin"></i> LinkedIn
       </a>
@@ -45,7 +45,7 @@ excerpt: "RavenScout Ecological Consulting Inc. provides professional wildlife m
     PhD candidate, University of Alberta (2022-2027)</p>
     
     <div class="member-links">
-      <a href="/sejer-profile.html/" class="btn btn--info" style="margin-top: 10px;">Detailed Profile</a>
+      <a href="/sejer-profile/" class="btn btn--info" style="margin-top: 10px;">Detailed Profile</a>
       <br>
       <a href="https://www.linkedin.com/in/sejermeyhoff/" target="_blank" style="color: #0077b5; font-weight: bold;">
         <i class="fab fa-linkedin"></i> LinkedIn
