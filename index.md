@@ -27,7 +27,7 @@ excerpt: "Ecological consulting services based in Whitehorse, Yukon."
   <div class="team-member">
     <img src="/assets/images/anna.jpg" alt="Anna Jacobsen">
     <h3>Anna Jacobsen, MSc</h3>
-    <p><strong>Owner/Operator</strong><br>
+    <p><strong>Owner/Biologist</strong><br>
     Master of Science, University of Alberta</p>
     
     <div class="member-links">
