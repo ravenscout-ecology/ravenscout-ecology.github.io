@@ -34,7 +34,6 @@ excerpt: "RavenScout Ecological Consulting Inc. provides professional wildlife m
     <h3>Sejer Meyhoff, MSc AWB PBiol</h3>
     <p><strong>Biologist</strong><br>
     Master of Science, University of Lethbridge<br>
-    Professional Biologist (ASPB)<br>
-    PhD Candidate, University of Alberta (2022-2027)</p>
+    PhD candidate, University of Alberta (2022-2027)</p>
   </div>
 </div>
