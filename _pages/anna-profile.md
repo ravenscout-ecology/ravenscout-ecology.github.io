@@ -1,4 +1,3 @@
-
 ---
 permalink: /anna-profile/
 title: "Anna Jacobsen, MSc"
