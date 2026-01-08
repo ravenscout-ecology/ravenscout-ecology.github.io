@@ -16,7 +16,7 @@ excerpt: "RavenScout Ecological Consulting Inc. provides professional wildlife m
 <div style="max-width: 800px; margin: 0 auto; text-align: justify; font-size: 1.1em; line-height: 1.8;">
   <p>RavenScout Ecological Consulting Inc. provides professional wildlife monitoring and ecological assessment services across the Yukon. We specialize in rigorous, science-based field work, analysis, and reporting that delivers actionable results for land management and conservation decisions.</p>
   
-  <p>Our team combines advanced academic training with field experience in bioacoustic monitoring, camera trapping, and environmental data collection including spectral indices. We work with industry, government, and conservation organizations to deliver high-quality ecological data and clear, practical reporting.</p>
+  <p>Our team combines advanced academic training with field experience in bioacoustic monitoring, camera trapping, and environmental data collection including spectral indices. We work with industry, government, and conservation organizations to deliver high-quality ecological data, analysis, and clear, practical reporting.</p>
 </div>
 
 <h2 style="text-align: center; margin-top: 4rem; margin-bottom: 2rem;">Our Team</h2>
