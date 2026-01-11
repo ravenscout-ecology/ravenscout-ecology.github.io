@@ -10,7 +10,7 @@ Ready to discuss your project? Get in touch using the form below or contact us d
 
 **Email:** [RavenScoutYT@gmail.com](mailto:RavenScoutYT@gmail.com)
 
-**Phone:** [867-332-2371](tel:867-332-2371)
+**Phone:** <a href="tel:867-332-2371">&#56;&#54;&#55;&#45;&#51;&#51;&#50;&#45;&#50;&#51;&#55;&#49;</a>
 
 **Location:** Whitehorse, Yukon
 
