@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RavenScout Ecological Consulting Inc.</title>
+
+  <!-- CMU Serif — used only for the company name display text -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.2/cmu-serif.css">
+
+  <!-- Lora (headings) + Inter (body/UI) — screen-optimised, academic character -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ============================================================
+       RAVENSCOUT ECOLOGICAL CONSULTING INC. — v3
+       Colors:  near-black #0E0F10  ·  copper #B87333  ·  olive #787B4E
+       Fonts:   CMU Serif (company name only)
+                Lora (section headings, pub titles, team names)
+                Inter (body, labels, nav, chips)
+       ============================================================ */
+
+    :root {
+      --bg-primary:    #0E0F10;
+      --bg-secondary:  #131516;
+      --bg-card:       #1A1D1F;
+      --bg-card-alt:   #1F2325;
+      --bg-olive-tint: #13160F;
+      --text-primary:  #EAE6DE;
+      --text-body:     #BAB6AE;
+      --text-muted:    #858079;
+      --text-dim:      #5A5752;
+      --copper:        #B87333;
+      --copper-light:  #D4956A;
+      --copper-dim:    #7A4E1E;
+      --olive:         #787B4E;
+      --olive-light:   #9EA271;
+      --olive-dark:    #4E5130;
+      --olive-bg:      rgba(120,123,78,0.10);
+      --border:        #252829;
+      --border-mid:    #2E3235;
+      --border-light:  #393D41;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-body);
+      font-size: 15px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Headings use Lora */
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    em { font-style: italic; }
+
+    a { color: var(--copper); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--copper-light); }
+
+    img { display: block; max-width: 100%; }
+
+    /* ---- LAYOUT ---- */
+    .section        { padding: 5.5rem 1.5rem; }
+    .section--alt   { background-color: var(--bg-secondary); }
+    .section--olive { background-color: var(--bg-olive-tint); }
+    .container      { max-width: 1100px; margin: 0 auto; }
+
+    /* ---- LABELS (all Inter, small caps style) ---- */
+    .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    .label--copper { color: var(--copper); }
+    .label--olive  { color: var(--olive-light); }
+
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.65rem, 3vw, 2.3rem);
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 0.85rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      line-height: 1.85;
+    }
+
+    .section-header { margin-bottom: 3.5rem; }
+    .section-header .label { display: block; margin-bottom: 0.6rem; }
+
+    /* Copper-only rule */
+    .copper-rule {
+      width: 40px; height: 2px;
+      background: var(--copper);
+      margin: 0.9rem 0 1.5rem;
+    }
+
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    .nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      /* Dark mountain green — matches the logo mountain colour (#2B411B) */
+      background: rgba(28, 42, 16, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(72, 77, 37, 0.5);
+    }
+
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 66px; position: relative;
+    }
+
+    .nav-brand { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; }
+
+    .nav-brand img { height: 40px; width: auto; }
+
+    .nav-wordmark { display: flex; flex-direction: column; line-height: 1.15; }
+    .nav-wordmark-top {
+      font-family: 'CMU Serif', 'Computer Modern', Georgia, serif;
+      font-size: 1rem; font-weight: normal;
+      color: var(--text-primary); letter-spacing: 0.02em;
+    }
+    .nav-wordmark-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.58rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--olive-light);
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.73rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-muted); transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text-primary); }
+
+    .nav-cta {
+      color: var(--copper) !important;
+      border: 1px solid var(--copper-dim);
+      padding: 0.4rem 0.95rem; border-radius: 2px;
+    }
+    .nav-cta:hover { background: var(--copper); color: #0E0F10 !important; border-color: var(--copper); }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('assets/images/header-bg.jpg');
+      background-size: cover; background-position: center 35%;
+      filter: brightness(0.28) saturate(0.65);
+    }
+
+    .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, transparent 40%, rgba(14,15,16,0.7) 100%);
+    }
+
+    .hero-content {
+      position: relative; z-index: 1;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 90px 1.5rem 3rem;
+      max-width: 840px;
+    }
+
+    /* Logo: 1.5× bigger than nav logo (40px nav → 165px hero) */
+    .hero-logo { width: 165px; height: auto; margin-bottom: 2rem; }
+
+    /* Company name: CMU Serif, two-line layout */
+    .hero-company-name {
+      font-family: 'CMU Serif', 'Computer Modern', Georgia, serif;
+      font-weight: normal; letter-spacing: 0.01em;
+      color: var(--text-primary); line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .hero-name-line1 {
+      display: block;
+      font-size: clamp(2.5rem, 6.5vw, 4.5rem);
+    }
+    /* Size calculated to match line1 rendered width:
+       "Ecological Consulting Inc." has ~2.19× the em-width of "RavenScout"
+       in CMU Serif proportional metrics, so 4.5rem × 0.456 ≈ 2.05rem */
+    .hero-name-line2 {
+      display: block;
+      font-size: clamp(1.1rem, 3.0vw, 2.05rem);
+      color: var(--text-primary);
+      letter-spacing: 0.025em; /* slight extra tracking to fine-tune width */
+    }
+
+    /* Tagline: upright, generous tracking */
+    .hero-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.85rem, 1.6vw, 1rem);
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--olive-light);
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-rule {
+      width: 56px; height: 1px;
+      background: linear-gradient(to right, var(--copper), var(--olive));
+      margin: 0 auto 1.75rem;
+    }
+
+    .hero-desc {
+      font-size: 0.97rem; color: #AAA6A0;
+      max-width: 560px; line-height: 1.9;
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ---- BUTTONS ---- */
+    .btn {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.73rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.8rem 1.8rem; border-radius: 2px;
+      transition: all 0.2s; cursor: pointer; border: none;
+    }
+    .btn-primary { background: var(--copper); color: #0E0F10; }
+    .btn-primary:hover { background: var(--copper-light); color: #0E0F10; }
+    .btn-outline { background: transparent; color: var(--text-primary); border: 1px solid var(--border-light); }
+    .btn-outline:hover { border-color: var(--copper); color: var(--copper-light); }
+
+    .hero-scroll {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+    }
+    .hero-scroll-line { width: 1px; height: 30px; background: linear-gradient(to bottom, var(--olive), transparent); }
+
+    /* Yukon territory outline — far right of nav, beside Contact Us.
+       Colour filter → copper. Four 1px hard drop-shadows (no blur) thicken the
+       stroke without any glow — gives a solid matte outline. */
+    .nav-yukon {
+      height: 38px; width: auto;
+      min-width: 37px; flex-shrink: 0;
+      margin-left: -0.9rem;
+      display: block;
+      filter: invert(57%) sepia(55%) saturate(550%) hue-rotate(355deg) brightness(88%)
+              drop-shadow(1px 0 0 #B87333) drop-shadow(-1px 0 0 #B87333);
+      pointer-events: none;
+    }
+
+    .hero-scroll span {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.58rem; font-weight: 500; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--text-dim);
+    }
+
+    /* ============================================================
+       ABOUT
+       ============================================================ */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+
+    .about-text p { color: var(--text-body); margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.85; }
+
+    /* Stats: copper-only accents */
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+
+    .stat-card {
+      background: var(--bg-card);
+      padding: 1.55rem 1.5rem;
+      border-top: 2px solid var(--copper);
+    }
+
+    .stat-number {
+      font-family: 'Lora', serif; font-size: 2rem;
+      color: var(--copper); line-height: 1; margin-bottom: 0.4rem;
+    }
+
+    .stat-label { font-size: 0.77rem; color: var(--text-muted); line-height: 1.45; }
+
+    /* ============================================================
+       SERVICES — copper accents throughout
+       ============================================================ */
+    .services-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5px; background: var(--border); }
+
+    .service-card {
+      background: var(--bg-card); padding: 2.5rem;
+      border-top: 2px solid var(--copper-dim);
+      transition: background 0.2s;
+    }
+    .service-card:hover { background: var(--bg-card-alt); }
+
+    .service-icon { font-size: 1.3rem; color: var(--copper); margin-bottom: 1.15rem; }
+
+    .service-title {
+      font-family: 'Lora', serif; font-size: 1.12rem;
+      font-weight: 400; color: var(--text-primary); margin-bottom: 0.7rem;
+    }
+
+    .service-body { font-size: 0.88rem; color: var(--text-muted); line-height: 1.8; }
+
+    .service-items { list-style: none; margin-top: 1rem; }
+    .service-items li {
+      font-size: 0.83rem; color: var(--text-dim);
+      padding: 0.27rem 0 0.27rem 1rem;
+      border-left: 1px solid var(--border-mid);
+      margin-bottom: 0.2rem;
+    }
+
+    /* ============================================================
+       TEAM
+       ============================================================ */
+    .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+    .team-card { background: var(--bg-card); border: 1px solid var(--border); overflow: hidden; }
+
+    .team-photo-wrap { position: relative; overflow: hidden; height: 330px; }
+
+    .team-photo-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 15%;
+      filter: brightness(0.93) saturate(0.95);
+      transition: transform 0.4s ease, filter 0.3s;
+    }
+
+    .team-card--sejer .team-photo-wrap img { object-position: center 20%; }
+
+    .team-card:hover .team-photo-wrap img { transform: scale(1.02); filter: brightness(0.97) saturate(1.0); }
+
+    .team-photo-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 40%;
+      background: linear-gradient(to top, var(--bg-card), transparent);
+    }
+
+    .team-body { padding: 1.75rem 2rem 2rem; }
+
+    .team-name {
+      font-family: 'Lora', serif; font-size: 1.25rem;
+      font-weight: 400; color: var(--text-primary); margin-bottom: 0.2rem;
+    }
+
+    .team-role {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.66rem; font-weight: 600; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--copper); margin-bottom: 1.25rem;
+    }
+
+    .team-bio { font-size: 0.9rem; color: var(--text-body); line-height: 1.8; margin-bottom: 1.5rem; }
+
+    .cred-section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.61rem; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--olive-light);
+      margin-bottom: 0.6rem; padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--border-mid);
+    }
+
+    .edu-list { list-style: none; margin-bottom: 1.35rem; }
+    .edu-list li {
+      font-size: 0.85rem; color: var(--text-muted);
+      padding: 0.28rem 0 0.28rem 0.9rem;
+      border-left: 1px solid var(--olive-dark);
+      margin-bottom: 0.28rem; line-height: 1.5;
+    }
+    .edu-list li strong { color: var(--text-primary); font-weight: 600; }
+
+    .specialty-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+    .chip {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem; font-weight: 500;
+      padding: 0.27rem 0.6rem; border-radius: 2px;
+      background: var(--bg-card-alt); color: var(--text-muted);
+      border: 1px solid var(--border-mid);
+    }
+
+    /* ============================================================
+       PUBLICATIONS
+       ============================================================ */
+    .pub-list { display: flex; flex-direction: column; }
+
+    .pub-item {
+      padding: 1.7rem 0; border-bottom: 1px solid var(--border);
+      display: grid; grid-template-columns: 3fr 1fr; gap: 2rem; align-items: start;
+    }
+    .pub-item:first-child { border-top: 1px solid var(--border); }
+
+    .pub-authors { font-size: 0.77rem; color: var(--text-dim); margin-bottom: 0.3rem; }
+
+    .pub-title {
+      font-family: 'Lora', serif; font-size: 0.97rem;
+      font-weight: 400; color: var(--text-primary); line-height: 1.5; margin-bottom: 0.4rem;
+    }
+
+    .pub-journal { font-size: 0.77rem; color: var(--copper); font-style: italic; }
+
+    .pub-badge {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.65rem; border-radius: 2px; white-space: nowrap;
+    }
+    .badge-published { background: var(--olive-bg); color: var(--olive-light); border: 1px solid rgba(120,123,78,0.3); }
+    .badge-revision  { background: rgba(184,115,51,0.1); color: var(--copper-light); border: 1px solid rgba(184,115,51,0.25); }
+    .badge-prep      { background: rgba(80,78,74,0.15); color: var(--text-muted); border: 1px solid var(--border-mid); }
+
+    /* ============================================================
+       GALLERY
+       ============================================================ */
+    .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.55rem; }
+
+    .gallery-item { position: relative; overflow: hidden; aspect-ratio: 4/3; }
+    .gallery-item--wide { grid-column: span 2; aspect-ratio: 16/7; }
+    .gallery-item--tall { grid-row: span 2; aspect-ratio: 3/4; }
+
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: brightness(0.82) saturate(0.88);
+      transition: transform 0.5s ease, filter 0.3s;
+    }
+    .gallery-item:hover img { transform: scale(1.04); filter: brightness(0.94) saturate(1.0); }
+
+    .gallery-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 0.6rem 0.9rem;
+      background: rgba(10, 11, 11, 0.88);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem; color: #D8D4CC;
+      opacity: 0; transition: opacity 0.25s;
+    }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+
+    /* ============================================================
+       CONTACT
+       ============================================================ */
+    .contact-grid { display: grid; grid-template-columns: 2fr 1.1fr; gap: 4rem; align-items: start; }
+
+    .form-group { margin-bottom: 1.15rem; }
+
+    .form-label {
+      display: block; font-family: 'Inter', sans-serif;
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 0.4rem;
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      background: var(--bg-card); border: 1px solid var(--border-light);
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif; font-size: 0.88rem;
+      padding: 0.7rem 1rem; border-radius: 2px;
+      transition: border-color 0.2s; outline: none;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--text-dim); }
+    .form-input:focus, .form-textarea:focus { border-color: var(--copper); }
+    .form-textarea { min-height: 120px; resize: vertical; }
+
+    .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
+
+    .contact-icon {
+      width: 34px; height: 34px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--copper); font-size: 0.8rem; flex-shrink: 0;
+    }
+
+    .contact-lbl {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.63rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.2rem;
+    }
+
+    .contact-val { font-size: 0.9rem; color: var(--text-primary); line-height: 1.5; }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 2.25rem 1.5rem; }
+
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 2rem; flex-wrap: wrap;
+    }
+
+    .footer-brand { display: flex; align-items: center; gap: 0.75rem; }
+    .footer-brand img { height: 28px; }
+    .footer-brandname {
+      font-family: 'CMU Serif', serif; font-size: 0.88rem; color: var(--text-muted);
+    }
+    .footer-brandname span { color: var(--copper); }
+
+    .footer-copy { font-family: 'Inter', sans-serif; font-size: 0.73rem; color: var(--text-dim); }
+
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { font-size: 0.78rem; color: var(--text-dim); }
+    .footer-links a:hover { color: var(--copper); }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .pub-item { grid-template-columns: 1fr; gap: 0.6rem; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item--wide { grid-column: span 2; }
+      .gallery-item--tall { grid-row: span 1; aspect-ratio: 4/3; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 580px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item--wide { grid-column: span 1; aspect-ratio: 4/3; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <img src="assets/images/logo-icon.png" alt="RavenScout Ecological Consulting Inc.">
+        <div class="nav-wordmark">
+          <span class="nav-wordmark-top">RavenScout Ecological Consulting Inc.</span>
+          <span class="nav-wordmark-sub">Whitehorse, Yukon</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+        <li><img src="assets/images/yukon-icon-transp.png" alt="Yukon Territory" class="nav-yukon"></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+
+      <img src="assets/images/logo-icon.png" alt="RavenScout Ecological Consulting Inc." class="hero-logo">
+
+      <h1 class="hero-company-name">
+        <span class="hero-name-line1">RavenScout</span>
+        <span class="hero-name-line2">Ecological Consulting Inc.</span>
+      </h1>
+
+      <p class="hero-tagline">Science in Practice &nbsp;·&nbsp; Whitehorse, Yukon</p>
+
+      <div class="hero-rule"></div>
+
+      <p class="hero-desc">
+        Professional wildlife monitoring and ecological assessment services across the Yukon and the north. We partner with government agencies, conservation organizations, and resource industries to deliver rigorous, science-based field work, analysis, and reporting.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-primary">Our Services</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section class="section section--olive" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="label label--olive">About RavenScout</span>
+          <h2 class="section-title" style="margin-top:0.6rem;">Bridging ecological science and land management</h2>
+          <div class="copper-rule"></div>
+          <p>RavenScout Ecological Consulting Inc. is dedicated to bridging the gap between academia and practical land management. Based in Whitehorse, Yukon, we deliver professional wildlife monitoring and ecological assessment services across the territory and the broader north.</p>
+          <p>Our philosophy is <em>Science in Practice.</em> We believe high-quality data is the foundation of responsible conservation and development. Whether working with industry, government, or conservation organizations, we deliver clear, actionable results from robust scientific methods.</p>
+          <p>Our team combines advanced academic training with field experience in bioacoustic monitoring, camera trapping, ecological data management, and remote sensing.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">600+</div>
+            <div class="stat-label">Days in the field</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Years post-secondary education between team members</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Professional reports for government and industry clients</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Peer-reviewed publications in ecology journals</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+       ============================================================ -->
+  <section class="section section--alt" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label--copper">What We Do</span>
+        <h2 class="section-title" style="margin-top:0.6rem;">Our Services</h2>
+        <div class="copper-rule"></div>
+        <p class="section-subtitle">From study design through to the final report — the full ecological monitoring workflow.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-binoculars"></i></div>
+          <h3 class="service-title">Field Work</h3>
+          <p class="service-body">Expert wildlife surveys across northern and mountain ecosystems, using established protocols and methods tailored to project requirements.</p>
+          <ul class="service-items">
+            <li>Study design and sampling protocols</li>
+            <li>Bioacoustic monitoring — ARU deployment and management</li>
+            <li>Bird surveys (point counts, incidental observations)</li>
+            <li>Camera trap deployment and monitoring</li>
+            <li>Drone-based aerial surveys and imagery</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+          <h3 class="service-title">Data Management</h3>
+          <p class="service-body">Rigorous data pipelines for large-scale ecological datasets, ensuring integrity, accessibility, and compliance with open data standards.</p>
+          <ul class="service-items">
+            <li>Acoustic data processing (WildTrax, HawkEars)</li>
+            <li>Large-scale dataset curation and quality control</li>
+            <li>Open data mobilization and publishing</li>
+            <li>GIS-based spatial data management (ArcGIS Pro)</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3 class="service-title">Analysis</h3>
+          <p class="service-body">Quantitative ecological analysis using current statistical and modelling approaches, with transparent, reproducible workflows in R and ArcGIS Pro.</p>
+          <ul class="service-items">
+            <li>Multivariate community ecology and ordination</li>
+            <li>Species-habitat relationship modelling</li>
+            <li>Occupancy and detection probability modelling</li>
+            <li>Stable isotope analysis for trophic ecology</li>
+            <li>Spatial analysis and mapping</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-file-lines"></i></div>
+          <h3 class="service-title">Reporting</h3>
+          <p class="service-body">Clear, technically rigorous reporting that translates ecological findings into actionable recommendations for decision-makers.</p>
+          <ul class="service-items">
+            <li>Technical reports for government and industry</li>
+            <li>Scientific manuscripts for peer-reviewed publication</li>
+            <li>Disturbance ecology assessments</li>
+            <li>Wildlife monitoring summaries</li>
+            <li>Data visualization</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TEAM
+       ============================================================ -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label--olive">Our Team</span>
+        <h2 class="section-title" style="margin-top:0.6rem;">Meet the Biologists</h2>
+        <div class="copper-rule"></div>
+        <p class="section-subtitle">Two quantitative ecologists with complementary field and analytical expertise in northern and mountain ecosystems.</p>
+      </div>
+      <div class="team-grid">
+
+        <!-- ANNA -->
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="assets/images/anna-enhanced.jpg" alt="Anna Jacobsen">
+            <div class="team-photo-overlay"></div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Anna Jacobsen, MSc</h3>
+            <p class="team-role">Biologist, Owner</p>
+            <p class="team-bio">Quantitative ecologist born and raised in Whitehorse, Yukon. Anna's MSc research at the University of Alberta focused on terrestrial bird responses to climate-amplified shrub dominance in boreal mountains of the Yukon. She brings 4.5 years of field and data management experience with Environment and Climate Change Canada's Canadian Wildlife Service to the table and founded RavenScout Ecological Consulting Inc. in 2025.</p>
+
+            <p class="cred-section-label">Education</p>
+            <ul class="edu-list">
+              <li><strong>MSc Ecology (Thesis)</strong> — University of Alberta, 2025</li>
+              <li><strong>BSc (Honours) Zoology</strong> — University of Calgary, 2015</li>
+            </ul>
+
+            <p class="cred-section-label">Core Expertise</p>
+            <div class="specialty-chips">
+              <span class="chip">Bioacoustics</span>
+              <span class="chip">ARU deployment</span>
+              <span class="chip">Acoustic data management</span>
+              <span class="chip">Mountain landbirds</span>
+              <span class="chip">WildTrax / HawkEars</span>
+              <span class="chip">ArcGIS Pro</span>
+              <span class="chip">R statistics</span>
+              <span class="chip">RPAS Pilot</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEJER -->
+        <div class="team-card team-card--sejer">
+          <div class="team-photo-wrap">
+            <img src="assets/images/sejer-field.jpg" alt="Sejer Meyhoff">
+            <div class="team-photo-overlay"></div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Sejer Meyhoff, MSc PBiol AWB</h3>
+            <p class="team-role">Biologist, Co-founder</p>
+            <p class="team-bio">Quantitative ecologist with expertise spanning trophic ecology, multi-species interactions, and wildlife field work. Sejer's MSc examined food web dynamics in sharp-tailed grouse via stable isotope analysis. He is currently a PhD candidate at the University of Alberta studying cumulative effects of landscape change on horses, cattle, and native grazers using camera traps, bioacoustics, and rangeland health metrics.</p>
+
+            <p class="cred-section-label">Education</p>
+            <ul class="edu-list">
+              <li><strong>PhD Candidate, Ecology</strong> — University of Alberta (exp. 2027)</li>
+              <li><strong>MSc Environmental Science</strong> — University of Lethbridge, 2020</li>
+              <li><strong>Dip. Renewable Resource Management (Honours)</strong> — Lethbridge College, 2017</li>
+            </ul>
+
+            <p class="cred-section-label">Core Expertise</p>
+            <div class="specialty-chips">
+              <span class="chip">Camera trapping</span>
+              <span class="chip">Large mammal ecology</span>
+              <span class="chip">Species-habitat modelling</span>
+              <span class="chip">Wildlife surveys</span>
+              <span class="chip">Stable isotopes</span>
+              <span class="chip">RPAS Pilot</span>
+              <span class="chip">Remote sensing</span>
+              <span class="chip">ArcGIS Pro</span>
+              <span class="chip">R statistics</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PUBLICATIONS
+       ============================================================ -->
+  <section class="section section--alt" id="publications">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label--copper">Research</span>
+        <h2 class="section-title" style="margin-top:0.6rem;">Published Work</h2>
+        <div class="copper-rule"></div>
+        <p class="section-subtitle">Peer-reviewed contributions from our team to the scientific literature.</p>
+      </div>
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <div>
+            <p class="pub-authors">Jacobsen, A., Mahon, C.L., and Bayne, E.</p>
+            <p class="pub-title">Response of terrestrial birds to climate-amplified shrub dominance in boreal mountains of Yukon, Canada</p>
+            <p class="pub-journal">Avian Conservation and Ecology</p>
+          </div>
+          <div><span class="pub-badge badge-revision">In Revision</span></div>
+        </div>
+
+        <div class="pub-item">
+          <div>
+            <p class="pub-authors">Mahon, C.L. and Jacobsen, A.</p>
+            <p class="pub-title">Community structure and conservation risks for birds across elevational gradients in northern boreal mountains of Yukon, Canada</p>
+            <p class="pub-journal">Manuscript in preparation</p>
+          </div>
+          <div><span class="pub-badge badge-prep">In Preparation</span></div>
+        </div>
+
+        <div class="pub-item">
+          <div>
+            <p class="pub-authors">Meyhoff, S., Martinez, J.A., Lebeuf-Taylor, I., Knight, E., and Bayne, E.</p>
+            <p class="pub-title">Spatiotemporal dynamics in scale of effect: multi-scale habitat associations of three large grazers across the growing season</p>
+            <p class="pub-journal">Manuscript in preparation</p>
+          </div>
+          <div><span class="pub-badge badge-prep">In Preparation</span></div>
+        </div>
+
+        <div class="pub-item">
+          <div>
+            <p class="pub-authors">Aojula, R., Jacobsen, A., and Bayne, E.</p>
+            <p class="pub-title">The effect of sunrise timing and mountain aspect on the dawn chorus of Swainson's Thrush</p>
+            <p class="pub-journal">Eureka, 8(2), 2023 &nbsp;·&nbsp; <a href="https://doi.org/10.29173/eureka28799" target="_blank">doi:10.29173/eureka28799</a></p>
+          </div>
+          <div><span class="pub-badge badge-published">Published</span></div>
+        </div>
+
+        <div class="pub-item">
+          <div>
+            <p class="pub-authors">Meyhoff, S., Johnson, D.L., Ellert, B.H., and Lutes, K.</p>
+            <p class="pub-title">Seasonal Changes of Stable Isotope Signals in the Primary Feathers of Plains Sharp-tailed Grouse</p>
+            <p class="pub-journal">Wildlife Society Bulletin, e1412, 2022</p>
+          </div>
+          <div><span class="pub-badge badge-published">Published</span></div>
+        </div>
+
+        <div class="pub-item">
+          <div>
+            <p class="pub-authors">Meyhoff, S., Johnson, D.L., and Bazinet, S.</p>
+            <p class="pub-title">Fall diet in sharp-tailed grouse (<em>Tympanuchus phasianellus jamesi</em>) and consumption of the grasshopper <em>Melanoplus dawsoni</em> in Alberta, Canada</p>
+            <p class="pub-journal">Food Webs, 24, 2020</p>
+          </div>
+          <div><span class="pub-badge badge-published">Published</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALLERY
+       ============================================================ -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label--olive">Field Work</span>
+        <h2 class="section-title" style="margin-top:0.6rem;">In the Field</h2>
+        <div class="copper-rule"></div>
+      </div>
+      <div class="gallery-grid">
+
+        <div class="gallery-item gallery-item--wide">
+          <img src="assets/images/aerial-yukon-summer.jpg" alt="Caribou telemetry in the Muskwa-Kechika Management Area">
+          <div class="gallery-caption">Caribou telemetry in the Muskwa-Kechika Management Area</div>
+        </div>
+        <div class="gallery-item gallery-item--tall">
+          <img src="assets/images/camera-trap-deployment.jpg" alt="Camera trap and ARU deployment, Alberta's foothills" style="object-position: center center;">
+          <div class="gallery-caption">Camera trap and ARU deployment, Alberta's foothills</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/anna-shrub-stick.jpg" alt="Bird and shrub surveys on Yukon mountains">
+          <div class="gallery-caption">Bird and shrub surveys on Yukon mountains</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/aerial-boreal-winter.jpg" alt="Aerial view of the northern boreal forest">
+          <div class="gallery-caption">Aerial view of the northern boreal forest</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/mountain-fieldsite.jpg" alt="Field work in the Rocky Mountain foothills, Alberta">
+          <div class="gallery-caption">Field work in the Rocky Mountain foothills, Alberta</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/sejer-veg.jpg" alt="Remote range exclosures in the foothills of the Rocky Mountains of Alberta">
+          <div class="gallery-caption">Remote range exclosures in the foothills of the Rocky Mountains of Alberta</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="section section--alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="label label--copper">Work With Us</span>
+        <h2 class="section-title" style="margin-top:0.6rem;">Get in Touch</h2>
+        <div class="copper-rule"></div>
+        <p class="section-subtitle">Ready to discuss your project? Contact us directly or use the form below.</p>
+      </div>
+      <div class="contact-grid">
+        <form action="https://formspree.io/f/xaqnzzyw" method="POST">
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+            <input class="form-input" type="text" id="name" name="name" required placeholder="Name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input class="form-input" type="email" id="email" name="email" required placeholder="email@example.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="org">Organization (optional)</label>
+            <input class="form-input" type="text" id="org" name="organization" placeholder="Company or agency">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" name="message" required placeholder="Describe your project or inquiry..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; font-size:0.75rem; padding:0.85rem;">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <p class="contact-lbl">Email</p>
+              <p class="contact-val"><a href="mailto:RavenScoutYT@gmail.com">RavenScoutYT@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <p class="contact-lbl">Phone</p>
+              <p class="contact-val"><a href="tel:8673322371">867-332-2371</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <p class="contact-lbl">Location</p>
+              <p class="contact-val">Whitehorse, Yukon</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-inbox"></i></div>
+            <div>
+              <p class="contact-lbl">Mailing Address</p>
+              <p class="contact-val">Box 20756<br>Whitehorse, YT &nbsp;Y1A 6N6</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logo-icon.png" alt="RavenScout Ecological Consulting Inc.">
+        <span class="footer-brandname"><span>RavenScout</span> Ecological Consulting Inc. &nbsp;·&nbsp; Whitehorse, Yukon</span>
+      </div>
+      <div class="footer-copy">&copy; 2025 RavenScout Ecological Consulting Inc.</div>
+      <div class="footer-links">
+        <a href="mailto:RavenScoutYT@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:8673322371"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
